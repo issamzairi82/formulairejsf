@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+--> 
+<!DOCTYPE html>
+    <html lang="fr"
+          xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:ui="http://java.sun.com/jsf/facelets">
+        <h:head>
+            <title>Inscription</title>
+          <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+          <h:outputStylesheet library="css" name="font-awesome.min.css"/>
+          <h:outputStylesheet  name="style.css"  />
+        </h:head>
+  <h:body>
+   <div class="container-fluid banner text-center" id="banner"> 
+    <div class="row">
+    <div class="col-md-12 line">
+        <div class="tablebox">
+        <div class="banner-text" id="bannertext">
+            <h1 class="hostyle" id="heads">JAVA EE</h1>
+            <p class="pstyle">We are Creative</p>
+            <a href="#menu" class="page-scroll arrow"><i class="fa fa-angle-down"></i></a> 
+        </div>
+        </div>
+    </div>
+    </div>
+  </div>
+   <div class="navbar menubar" id="menu">
+      <div class="container">
+      <div class="navbar-header"> 	
+      <a class="navbar-brand logo" href="#">ISSAM</a> 
+      </div>
+      <div>
+    	<nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
+        
+       </nav>
+      </div>
+  </div>
+  </div>
+	<div class="container" id="ss">
+    	<div class="row">
+        	<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+               <div class="panel panel-info">
+                        <div class="panel-heading">
+                           Inscription
+                        </div>
+                        <div class="panel-body">
+                            <h:form role="form">
+                                <div class="form-group">
+                                 <h:outputLabel value="Nom   :  "  />
+                                    <h:inputText value="#{user.nom}" class="form-control" >
+                                    <f:validator validatorId="VN"/> 
+                                    </h:inputText>
+                                </div>
+                                <div class="form-group">
+                                 <h:outputLabel value="Prenom   :  "  />
+                                    <h:inputText value="#{user.prenom}" class="form-control" >
+                                    <f:validator validatorId="VP"/> 
+                                    </h:inputText>
+                                </div>
+                                <div class="form-group">
+                                 <h:outputLabel value="Email :  "  />
+                                    <h:inputText value="#{user.email}" class="form-control" >
+                                    <f:validator validatorId="VE"/> 
+                                    </h:inputText>
+                                </div>
+                                <div class="form-group">
+                                 <h:outputLabel value="Mot De Passe :  "  />
+                                 <h:inputSecret value="#{user.pwd}" class="form-control" >
+                                    <f:validator validatorId="VPwd" /> 
+                                    </h:inputSecret>
+                                </div>
+                                <div class="form-group">
+                                 <h:outputLabel value="Confirmation :  "  />
+                                    <h:inputSecret value="#{user.conf}" class="form-control" >
+                                    <f:validator validatorId="VC" /> 
+                                    </h:inputSecret>
+                                </div>                           
+                                <h:commandButton value="Confirmer"  class="btn btn-info" action="succes" />
+                              </h:form>
+                            </div>
+                        </div>
+                    </div>
+            
+            </div>
+        </div>
+
+
+
+    <footer class="foot"> 
+	<div class="container">
+    	<div class="row">
+        	<div class="col-md-12 col-sm-12 col-xs-12">
+            	<h4 class="foot-logo">ENSIT</h4>
+            </div>
+            <div class="col-md-12 col-xs-12 col-sm-12 text-center">
+            
+            </div>
+        </div>
+    </div>
+    </footer>
+</h:body>
+
+        
+    </html>
+            
